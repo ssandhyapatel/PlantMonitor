@@ -141,7 +141,7 @@ voc_raw,temp_celsius,humidity_percent
 
 ## 🧪 Demo
 
-- **Short demo video:** *(add link or GitHub release asset)*  
+- **Short demo video:** *(Demonstration/Plant-Monitor Video.mp4)*  
 - **Pitch/Report PDFs:** *(optional links to `docs/` or releases)*
 
 ---
