@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0A3D31"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- VOC Alert Threshold Label -->
+    <TextView
+        android:id="@+id/vocLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VOC Alert Threshold"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/settingsTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- VOC SeekBar -->
+    <SeekBar
+        android:id="@+id/seekVoc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progress="50"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/vocLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vocValue"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <!-- VOC Value Box -->
+    <TextView
+        android:id="@+id/vocValue"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="@drawable/rounded_box"
+        app:layout_constraintTop_toTopOf="@id/seekVoc"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        app:layout_constraintTop_toBottomOf="@id/seekVoc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Temperature Range -->
+    <TextView
+        android:id="@+id/tempLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature Range"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/seekVoc"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tempValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30°C – 38°C"
+        android:textSize="15sp"
+        android:textColor="#444444"
+        app:layout_constraintTop_toBottomOf="@id/tempLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        app:layout_constraintTop_toBottomOf="@id/tempValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Humidity Alert Threshold -->
+    <TextView
+        android:id="@+id/humidLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity Alert Threshold"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tempValue"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/humidValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt; 40%"
+        android:textSize="15sp"
+        android:textColor="#444444"
+        app:layout_constraintTop_toBottomOf="@id/humidLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        app:layout_constraintTop_toBottomOf="@id/humidValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Sync Interval -->
+    <TextView
+        android:id="@+id/syncLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sync Interval"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/humidValue"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/syncValue"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:text="5s"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:background="@drawable/rounded_box"
+        android:gravity="center"
+        android:drawableEnd="@android:drawable/arrow_down_float"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="@id/syncLabel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        app:layout_constraintTop_toBottomOf="@id/syncLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Plant Type -->
+    <TextView
+        android:id="@+id/plantLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plant Type"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/syncLabel"
+        android:layout_marginTop="48dp"
+
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/plantValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rubber"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:background="@drawable/rounded_box"
+        android:gravity="center"
+        android:drawableEnd="@android:drawable/arrow_down_float"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="@id/plantLabel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#F4F4F4"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

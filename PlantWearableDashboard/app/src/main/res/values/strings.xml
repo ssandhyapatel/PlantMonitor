@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PlantMonitor</string>
+    <string name="status_healthy">Healthy</string>
+    <string name="status_stressed">Stressed</string>
+    <string name="last_updated_now">Just now</string>
+    <string name="updated_recently">%1$d seconds ago</string>
+    <string name="voc_value_format">%1$d ppm</string>
+    <string name="temp_value_format">%.1f°C</string>
+    <string name="humidity_value_format">%1$d%%</string>
+    <string name="humidity_threshold">&lt; 40%</string>
+
+
+
+</resources>

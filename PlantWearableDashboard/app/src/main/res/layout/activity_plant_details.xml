@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/plantDetailsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Toolbar Title -->
+    <TextView
+        android:id="@+id/plantDetailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plant details"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#0A3D31"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Plant Name -->
+    <TextView
+        android:id="@+id/plantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rubber"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/plantDetailsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Plant Image -->
+    <ImageView
+        android:id="@+id/plantImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rubber"
+        android:background="@drawable/rounded_corners"
+
+    app:layout_constraintTop_toBottomOf="@id/plantName"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="12dp"/>
+
+    <!-- Air Quality -->
+    <TextView
+        android:id="@+id/airQualityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Air Quality"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/plantImage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/vocStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VOC: Optimal"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/airQualityLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Lighting -->
+    <TextView
+        android:id="@+id/lightingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lighting"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/vocStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/lightLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Light level: Moderate"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/lightingLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Recommendations Section -->
+    <TextView
+        android:id="@+id/recommendLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommendations"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/lightLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/recommendationBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_box"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/recommendLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_lock_black_24dp"
+            android:contentDescription="icon" />
+
+        <TextView
+            android:id="@+id/recommendationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water the plant with 200 ml"
+            android:layout_marginStart="12dp"
+            android:textColor="#0A3D31"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Remove Plant Button -->
+    <Button
+        android:id="@+id/removePlantBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Remove plant"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0A3D31"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintTop_toBottomOf="@id/recommendationBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#F4F4F4"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
