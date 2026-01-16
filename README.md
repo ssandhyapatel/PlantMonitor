@@ -59,7 +59,7 @@ PlantMonitor/
 └─ README.md
 ```
 
-> Adjust paths/names to match your actual repo layout.
+
 
 ---
 
@@ -80,7 +80,7 @@ PlantMonitor/
 4. **Sampling**
    - Start at 1–3 s intervals; tune for battery/latency
 
-> Keep the output stable and include a newline `\n`—the app’s parser splits on comma and trims lines.
+
 
 ---
 
